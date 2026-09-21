@@ -1,6 +1,9 @@
 import fs from "fs/promises";
 import path from "path";
+import { getData } from "pdf-parse/worker";
 import { PDFParse } from "pdf-parse";
+
+PDFParse.setWorker(getData());
 import os from "os";
 import { randomUUID } from "crypto";
 
