@@ -145,6 +145,9 @@ const extractPdfText = async (media) => {
                 tempFilePath
             );
 
+        const { PDFParse } =
+            await import("pdf-parse");
+
         const parser =
             new PDFParse({
                 data: buffer
